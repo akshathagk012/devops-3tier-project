@@ -1,0 +1,12 @@
+<h1>3 Tier DevOps App</h1>
+<button onclick="call()">Call Backend</button>
+<p id="res"></p>
+
+<script>
+function call(){
+ fetch("/api/")
+ .then(r=>r.text())
+ .then(d=>document.getElementById("res").innerText=d)
+}
+</script>
+
